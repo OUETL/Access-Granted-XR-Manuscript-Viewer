@@ -28,10 +28,10 @@ public class ObjectController : MonoBehaviour
         yAngle = rotateVector.y;
 
         obj.transform.Rotate(yAngle, xAngle, zAngle, Space.World);
-        if (xAngle < 0.5f)
-        {
-            Debug.Log("xAngle: " + xAngle);
-        }
+        //if (xAngle < 0.5f)
+        //{
+        //    Debug.Log("xAngle: " + xAngle);
+        //}
     }
 
 
