@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.XR.Interaction.Toolkit;
 
 namespace OU.OVAL.Core
 {
@@ -36,6 +36,9 @@ namespace OU.OVAL.Core
         public Pointer3DRaycaster rRaycaster;*/
         public RaycastHit lRaycaster;
         public RaycastHit rRaycaster;
+
+        //the raycast used by XR Interaction Toolkit  for hand interactions
+        public XRRayInteractor leftRaycast, rightRaycast;
 
         // We commonly need collsions between the controller pointers and various objects in the scene
         public PointerCollisionInfo lCollision = new PointerCollisionInfo();
@@ -84,30 +87,44 @@ namespace OU.OVAL.Core
         {
             lCollision.collidedWith = null;
             rCollision.collidedWith = null;
-
-/*            // Left
+            int temp;
+            bool validTarget;
+            //left
+            if (leftRaycast.TryGetHitInfo(out lCollision.worldPosition, out lCollision.worldNormal, out temp, out validTarget))
             {
-                var srr = Instance.lRaycaster.SortedRaycastResults;
-                if (srr.Count > 0)
-                {
-                    lCollision.collidedWith = srr[0].gameObject;
-                    lCollision.worldPosition = srr[0].worldPosition;
-                    lCollision.worldNormal = srr[0].worldNormal;
-                    lCollision.distance = srr[0].distance;
-                }
+                // lCollision.collidedWith = leftRaycast.ge
+                RaycastHit raycastHit;
+               // leftRaycast.GetCurrentRaycastHit(out raycastHit);
+               // raycastHit.
             }
 
-            // Right
-            {
-                var srr = Instance.rRaycaster.SortedRaycastResults;
-                if (srr.Count > 0)
-                {
-                    rCollision.collidedWith = srr[0].gameObject;
-                    rCollision.worldPosition = srr[0].worldPosition;
-                    rCollision.worldNormal = srr[0].worldNormal;
-                    rCollision.distance = srr[0].distance;
-                }
-            }*/
+            //right
+            rightRaycast.TryGetHitInfo(out rCollision.worldPosition, out rCollision.worldNormal, out temp, out validTarget);
+
+
+            /*            // Left
+                        {
+                            var srr = Instance.lRaycaster.SortedRaycastResults;
+                            if (srr.Count > 0)
+                            {
+                                lCollision.collidedWith = srr[0].gameObject;
+                                lCollision.worldPosition = srr[0].worldPosition;
+                                lCollision.worldNormal = srr[0].worldNormal;
+                                lCollision.distance = srr[0].distance;
+                            }
+                        }
+
+                        // Right
+                        {
+                            var srr = Instance.rRaycaster.SortedRaycastResults;
+                            if (srr.Count > 0)
+                            {
+                                rCollision.collidedWith = srr[0].gameObject;
+                                rCollision.worldPosition = srr[0].worldPosition;
+                                rCollision.worldNormal = srr[0].worldNormal;
+                                rCollision.distance = srr[0].distance;
+                            }
+                        }*/
         }
 
         public void Start()
