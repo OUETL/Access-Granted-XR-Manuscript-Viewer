@@ -4,6 +4,7 @@ using TMPro;
 using UnityEngine.InputSystem;
 using System.Linq;
 using OU.OVAL.Core;
+using System;
 
 namespace OU.OVAL
 {
@@ -32,6 +33,8 @@ namespace OU.OVAL
         //
         // Internals
         //
+       
+
 
         Core.Annotation doodle = new Core.Annotation();
         Core.AnnotationRender doodleRender = new Core.AnnotationRender();
@@ -134,6 +137,7 @@ namespace OU.OVAL
         private void OnEnable()
         {
             ClearDoodle();
+
         }
         private void OnDisable()
         {
@@ -145,8 +149,8 @@ namespace OU.OVAL
             var common = Core.Common.Instance;
             Vector3 collidedAt = Vector3.zero;
 
-            *//*            var lActive = common.inputWrapper.GetLeft().Pressed(Core.Constants.ButtonFlags.Trigger);
-                        var rActive = common.inputWrapper.GetRight().Pressed(Core.Constants.ButtonFlags.Trigger); *//*
+                        var lActive = common.inputWrapper.GetLeft().Pressed(Core.Constants.ButtonFlags.Trigger);
+                        var rActive = common.inputWrapper.GetRight().Pressed(Core.Constants.ButtonFlags.Trigger);
 
             var lActive = false;
             var rActive = false;
@@ -243,12 +247,8 @@ namespace OU.OVAL
             ClearDoodle();
         }
 
-        public void Select(InputAction.CallbackContext context)
+        public void Select(InputMonitor.HandInputInfo inputInfo)
         {
-            //find which hand selected
-            // Hand hand = DetermineHandController(context);
-            Hand hand = Hand.Left;
-
             bool dropPoint = false;   // drop a new point in the measurement
             bool trackCursor = true;  // connect the last dropped point to the current cursor position
 
@@ -258,12 +258,12 @@ namespace OU.OVAL
             //
             // Update tracking & click status
             //
-            if (hand != Hand.Neither)
+            if (inputInfo.Hand != Hand.Neither)
             {
                 // Very first click in the whole measurement?
                 if (tracking == Tracking.None)
                 {
-                    tracking = (hand == Hand.Left || hand == Hand.Left) ? (Tracking.Left) : (Tracking.Right);
+                    tracking = (inputInfo.Hand == Hand.Left) ? (Tracking.Left) : (Tracking.Right);
                 }
 
                 // First frame of a click along the measurement; drop a point.
@@ -287,7 +287,8 @@ namespace OU.OVAL
             //
             // Check for collisions of pointer and UI / scene objects.
             //
-            Core.Common.PointerCollisionInfo collision = (tracking == Tracking.Left) ? common.lCollision : common.rCollision;
+            // Core.Common.PointerCollisionInfo collision = (tracking == Tracking.Left) ? common.lCollision : common.rCollision;
+            PointerCollisionInfo collision = inputInfo.PointerCollisionInfo;
             collidedAt = collision.worldPosition + (collision.worldNormal * surfaceOffset);
 
 
@@ -308,7 +309,7 @@ namespace OU.OVAL
             // At this point, we have all the information we need to manipulate the points etc
             //
 
-            var controllerTransform = (tracking == Tracking.Left) ? (common.lTransform) : (common.rTransform);
+            var controllerTransform = inputInfo.HandTransform;
             var pos = (measureOnSurface) ? (collidedAt) : (controllerTransform.position);
 
             if (dropPoint) // && trackCursor)
