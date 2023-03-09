@@ -1,11 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.UIElements;
 using TMPro;
+using UnityEngine.InputSystem;
+using System.Linq;
+using OU.OVAL.Core;
 
 namespace OU.OVAL
 {
     using EventType = Core.Events.Type;
     using EventArgs = Core.Events.Args;
+    using static UnityEngine.ParticleSystem;
+    using static OU.OVAL.Core.Common;
 
     public class MeasurePanel : MonoBehaviour
     {
@@ -135,13 +140,13 @@ namespace OU.OVAL
             ClearDoodle();
         }
 
-        void Update()
+/*        void Update()
         {
             var common = Core.Common.Instance;
             Vector3 collidedAt = Vector3.zero;
 
-            /*            var lActive = common.inputWrapper.GetLeft().Pressed(Core.Constants.ButtonFlags.Trigger);
-                        var rActive = common.inputWrapper.GetRight().Pressed(Core.Constants.ButtonFlags.Trigger); */
+            *//*            var lActive = common.inputWrapper.GetLeft().Pressed(Core.Constants.ButtonFlags.Trigger);
+                        var rActive = common.inputWrapper.GetRight().Pressed(Core.Constants.ButtonFlags.Trigger); *//*
 
             var lActive = false;
             var rActive = false;
@@ -206,7 +211,7 @@ namespace OU.OVAL
             //
             if (measureOnSurface)
             {
-                if (!collidedWithOO) trackCursor = false;
+                //if (!collidedWithOO) trackCursor = false;
                 if (collidedWithOO != measureTarget) trackCursor = false;
             }
 
@@ -231,11 +236,100 @@ namespace OU.OVAL
                 doodle.sections[0][N-1] = trackCursor ? pos : doodle.sections[0][N-2];
                 UpdateDoodle();
             }
-        }
+        }*/
 
         void OnClearDoodleEvent(object sender, EventArgs args )
         {
             ClearDoodle();
         }
+
+        public void Select(InputAction.CallbackContext context)
+        {
+            //find which hand selected
+            // Hand hand = DetermineHandController(context);
+            Hand hand = Hand.Left;
+
+            bool dropPoint = false;   // drop a new point in the measurement
+            bool trackCursor = true;  // connect the last dropped point to the current cursor position
+
+            var common = Core.Common.Instance;
+            Vector3 collidedAt = Vector3.zero;
+
+            //
+            // Update tracking & click status
+            //
+            if (hand != Hand.Neither)
+            {
+                // Very first click in the whole measurement?
+                if (tracking == Tracking.None)
+                {
+                    tracking = (hand == Hand.Left || hand == Hand.Left) ? (Tracking.Left) : (Tracking.Right);
+                }
+
+                // First frame of a click along the measurement; drop a point.
+                if (clickDown == false)
+                {
+                    dropPoint = true;
+                }
+
+                clickDown = true;
+            }
+            else
+            {
+                clickDown = false;
+            }
+
+            //
+            // If we're not tracking anything, stop here.
+            //
+            if (tracking == Tracking.None) return;
+
+            //
+            // Check for collisions of pointer and UI / scene objects.
+            //
+            Core.Common.PointerCollisionInfo collision = (tracking == Tracking.Left) ? common.lCollision : common.rCollision;
+            collidedAt = collision.worldPosition + (collision.worldNormal * surfaceOffset);
+
+
+            var obj = collision.collidedWith;
+            OVALObject collidedWithOO = Core.OVALObject.GetOwner(obj);
+            if (!measureTarget && collidedWithOO) measureTarget = collidedWithOO;
+
+            //
+            // Determine whether to join the current cursor position to the last dropped point.
+            //
+            if (measureOnSurface)
+            {
+                if (!collidedWithOO) trackCursor = false;
+                if (collidedWithOO != measureTarget) trackCursor = false;
+            }
+
+            //
+            // At this point, we have all the information we need to manipulate the points etc
+            //
+
+            var controllerTransform = (tracking == Tracking.Left) ? (common.lTransform) : (common.rTransform);
+            var pos = (measureOnSurface) ? (collidedAt) : (controllerTransform.position);
+
+            if (dropPoint) // && trackCursor)
+            {
+                doodle.AddPoint(pos);
+                if (doodle.sections[0].Count == 1) doodle.AddPoint(pos); // Also add cursor tracking point, if first point in measurement
+                //if (newButton && !newButton.interactable) newButton.interactable = true;
+                //Debug.LogWarning( $"{doodle.sections.Count} {doodle.sections[0].Count}" );
+            }
+
+            int N = doodle.sections[0].Count;
+            if (N > 1) // should always be true at this point, but just in case!
+            {
+                doodle.sections[0][N - 1] = trackCursor ? pos : doodle.sections[0][N - 2];
+                UpdateDoodle();
+            }
+
+        }
+
+
     }
+
+
 }

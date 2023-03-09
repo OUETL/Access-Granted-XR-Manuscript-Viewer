@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.XR.Interaction.Toolkit;
 
 namespace OU.OVAL.Core
@@ -63,7 +66,7 @@ namespace OU.OVAL.Core
         // Common MonoBehaviour assigned to it.
         //
 
-        private static Object _lock = new Object();
+        private static UnityEngine.Object _lock = new UnityEngine.Object();
         private static Common _instance;
         public static Common Instance
         {
@@ -89,17 +92,23 @@ namespace OU.OVAL.Core
             rCollision.collidedWith = null;
             int temp;
             bool validTarget;
+/*            RaycastHit raycastHit;
             //left
-            if (leftRaycast.TryGetHitInfo(out lCollision.worldPosition, out lCollision.worldNormal, out temp, out validTarget))
+            //if (leftRaycast.TryGetHitInfo(out lCollision.worldPosition, out lCollision.worldNormal, out temp, out validTarget))
+            if (leftRaycast.TryGetCurrent3DRaycastHit(out raycastHit))
             {
                 // lCollision.collidedWith = leftRaycast.ge
-                RaycastHit raycastHit;
+
+                if (raycastHit.transform.gameObject != null) Debug.Log("Object:" + raycastHit.transform.gameObject.name);
+                else Debug.Log("Nuthin");
+               
                // leftRaycast.GetCurrentRaycastHit(out raycastHit);
                // raycastHit.
             }
+            else Debug.Log("Nuthin");*/
 
             //right
-            rightRaycast.TryGetHitInfo(out rCollision.worldPosition, out rCollision.worldNormal, out temp, out validTarget);
+            //rightRaycast.TryGetHitInfo(out rCollision.worldPosition, out rCollision.worldNormal, out temp, out validTarget);
 
 
             /*            // Left
@@ -132,6 +141,62 @@ namespace OU.OVAL.Core
             // Registration of visual elements should have taken place in the appropriate
             // Awake() routines of the elements themselves.
             scalableVisualElements.SetScaleFactor( config.visualScaleFactor );
+        }
+/*
+        public void OnSelect(InputAction.CallbackContext context)
+       // public void Gripped()
+        {
+            if(context.canceled) return; //button input was released; ignore pls
+
+            RaycastHit raycastHit;
+            //left
+            if (leftRaycast.TryGetCurrent3DRaycastHit(out raycastHit))
+            {
+                if (raycastHit.transform.gameObject != null) Debug.Log("Object: " + raycastHit.transform.gameObject.name);
+                else Debug.Log("Nuthin");
+
+            }
+            else Debug.Log("No raycast hit");
+
+           
+
+            *//*            //find which hand selected
+                        Hand hand = DetermineHandController(context);
+
+
+                        //
+                        // Check for collisions of pointer and UI / scene objects.
+                        //
+                        Core.Common.PointerCollisionInfo collision = (hand == Hand.Left) ? lCollision : rCollision;
+
+                        var obj = collision.collidedWith;
+                        OVALObject collidedWithOO = Core.OVALObject.GetOwner(obj);
+                        if (!measureTarget && collidedWithOO) measureTarget = collidedWithOO;
+
+
+                        //
+                        // At this point, we have all the information we need to manipulate the points etc
+                        //
+
+                        var controllerTransform = (tracking == Tracking.Left) ? (common.lTransform) : (common.rTransform);
+                        var pos = (measureOnSurface) ? (collidedAt) : (controllerTransform.position);*//*
+
+
+        }*/
+
+        //move this over to a util class later
+        //both hands?
+        public enum Hand { Left, Right, Neither };
+        public Hand DetermineHandController(InputAction.CallbackContext context)
+        {
+            var device = context.control.device;
+
+            if (device.usages.Contains(CommonUsages.LeftHand))
+                return Hand.Left;
+            if (device.usages.Contains(CommonUsages.RightHand))
+                return Hand.Right;
+
+            return Hand.Neither;
         }
     }
 }
