@@ -43,6 +43,7 @@ namespace OU.OVAL
         enum Tracking { None, Left, Right };
         Tracking tracking = Tracking.None;
         bool clickDown = false;
+        bool isMeasuring = false;
 
         public void ClearDoodle()
         {
@@ -247,8 +248,17 @@ namespace OU.OVAL
             ClearDoodle();
         }
 
+        public void ButtonClicked()
+        {
+            isMeasuring = !isMeasuring;
+            //toggle whether we are measuring or not, only when the button is pressed
+        }
+
         public void Select(InputMonitor.HandInputInfo inputInfo)
         {
+            if (!isMeasuring) return;
+            Debug.Log(inputInfo.ToString());
+
             bool dropPoint = false;   // drop a new point in the measurement
             bool trackCursor = true;  // connect the last dropped point to the current cursor position
 

@@ -14,6 +14,11 @@ public class InputMonitor : MonoBehaviour
         public Common.PointerCollisionInfo PointerCollisionInfo;
         public Transform HandTransform;
         public Common.Hand Hand;
+
+        public override string ToString()
+        {
+            return $"{Hand.ToString()}, Collided with {PointerCollisionInfo.collidedWith.ToString()} at {PointerCollisionInfo.worldPosition.ToString()}.";
+        }
     }
 
     public event EventHandler<HandInputInfo> SelectPressed;
@@ -23,6 +28,12 @@ public class InputMonitor : MonoBehaviour
     // Left and right controller transforms
     public Transform lTransform, rTransform;
     public MeasurePanel panel;
+    public PlayerInput playerInput;
+
+    public void ChangeInteractionLayer()
+    {
+        leftRaycast.interactionLayers = InteractionLayerMask.NameToLayer("OvalObject");
+    }
     private void OnLeftSelect(InputValue value)
     {
         RaycastHit raycastHit;
@@ -56,5 +67,16 @@ public class InputMonitor : MonoBehaviour
     {
         Debug.Log("right hand");
 
+    }
+
+    public void SwitchToMeasureControls()
+    {
+        playerInput.SwitchCurrentActionMap("XRI Interaction");
+    }
+
+    public void SwitchToGrabControls()
+    {
+        //needs a better name
+        //default controls
     }
 }
