@@ -6394,25 +6394,25 @@ struct TwoPaneSplitViewResizer_t2F90BA5231BD6B25F7442A86359B78004B73CEF5  : publ
 struct BaseField_1_tB351B262306464787F5A31B33CDC431E89796615  : public BindableElement_t873EFF65032D21AB3B7BFBA21675D1693967435C
 {
 	// System.Single UnityEngine.UIElements.BaseField`1::m_LabelWidthRatio
-	float ___m_LabelWidthRatio_80;
+	float ___m_LabelWidthRatio_81;
 	// System.Single UnityEngine.UIElements.BaseField`1::m_LabelExtraPadding
-	float ___m_LabelExtraPadding_81;
+	float ___m_LabelExtraPadding_82;
 	// System.Single UnityEngine.UIElements.BaseField`1::m_LabelBaseMinWidth
-	float ___m_LabelBaseMinWidth_82;
+	float ___m_LabelBaseMinWidth_83;
 	// UnityEngine.UIElements.VisualElement UnityEngine.UIElements.BaseField`1::m_VisualInput
-	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___m_VisualInput_83;
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___m_VisualInput_84;
 	// TValueType UnityEngine.UIElements.BaseField`1::m_Value
-	int32_t ___m_Value_84;
+	int32_t ___m_Value_85;
 	// UnityEngine.UIElements.Label UnityEngine.UIElements.BaseField`1::<labelElement>k__BackingField
-	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* ___U3ClabelElementU3Ek__BackingField_85;
+	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* ___U3ClabelElementU3Ek__BackingField_86;
 	// System.Boolean UnityEngine.UIElements.BaseField`1::m_ShowMixedValue
-	bool ___m_ShowMixedValue_86;
+	bool ___m_ShowMixedValue_87;
 	// UnityEngine.UIElements.Label UnityEngine.UIElements.BaseField`1::m_MixedValueLabel
-	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* ___m_MixedValueLabel_87;
+	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* ___m_MixedValueLabel_88;
 	// UnityEngine.UIElements.VisualElement UnityEngine.UIElements.BaseField`1::m_CachedInspectorElement
-	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___m_CachedInspectorElement_88;
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___m_CachedInspectorElement_89;
 	// System.Int32 UnityEngine.UIElements.BaseField`1::m_CachedListAndFoldoutDepth
-	int32_t ___m_CachedListAndFoldoutDepth_89;
+	int32_t ___m_CachedListAndFoldoutDepth_90;
 };
 
 // UnityEngine.UIElements.MouseCaptureEventBase`1<UnityEngine.UIElements.MouseCaptureEvent>
@@ -6865,11 +6865,11 @@ struct MouseCaptureOutEvent_t55FDD6FD486DDB02F1878EEF2716F444E7A94AF5  : public 
 struct RadioButtonGroup_t92E82155D2102EA368B854C8F088737BED188DDE  : public BaseField_1_tB351B262306464787F5A31B33CDC431E89796615
 {
 	// System.Collections.Generic.IEnumerable`1<System.String> UnityEngine.UIElements.RadioButtonGroup::m_Choices
-	RuntimeObject* ___m_Choices_91;
+	RuntimeObject* ___m_Choices_92;
 	// System.Collections.Generic.List`1<UnityEngine.UIElements.RadioButton> UnityEngine.UIElements.RadioButtonGroup::m_RadioButtons
-	List_1_t83677DD3658C07F0F0DD73BD808F8F9EE45CDDE4* ___m_RadioButtons_92;
+	List_1_t83677DD3658C07F0F0DD73BD808F8F9EE45CDDE4* ___m_RadioButtons_93;
 	// UnityEngine.UIElements.EventCallback`1<UnityEngine.UIElements.ChangeEvent`1<System.Boolean>> UnityEngine.UIElements.RadioButtonGroup::m_RadioButtonValueChangedCallback
-	EventCallback_1_t0FE3F70E94CC4C4904A9F1C171A3DE56EE41F103* ___m_RadioButtonValueChangedCallback_93;
+	EventCallback_1_t0FE3F70E94CC4C4904A9F1C171A3DE56EE41F103* ___m_RadioButtonValueChangedCallback_94;
 };
 
 // UnityEngine.UIElements.RuntimePanel
@@ -8422,7 +8422,7 @@ struct PanelTextSettings_tB4960351E6865BC34421430949C4CA68E7425F25_StaticFields
 struct RadioButtonGroup_t92E82155D2102EA368B854C8F088737BED188DDE_StaticFields
 {
 	// System.String UnityEngine.UIElements.RadioButtonGroup::ussClassName
-	String_t* ___ussClassName_90;
+	String_t* ___ussClassName_91;
 };
 
 // UnityEngine.UIElements.RadioButtonGroup

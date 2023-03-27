@@ -5,7 +5,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
+using static MeasureInputActionTest;
+using static OU.OVAL.Core.Common;
 
 public class InputMonitor : MonoBehaviour
 {
@@ -17,11 +20,11 @@ public class InputMonitor : MonoBehaviour
 
         public override string ToString()
         {
-            return $"{Hand.ToString()}, Collided with {PointerCollisionInfo.collidedWith.ToString()} at {PointerCollisionInfo.worldPosition.ToString()}.";
+            return $"{Hand}, Collided with {PointerCollisionInfo.collidedWith} at {PointerCollisionInfo.worldPosition}.";
         }
     }
 
-    public event EventHandler<HandInputInfo> SelectPressed;
+    //public event EventHandler<HandInputInfo> SelectPressed;
     //the raycast used by XR Interaction Toolkit  for hand interactions
     public XRRayInteractor leftRaycast, rightRaycast;
 
@@ -55,28 +58,58 @@ public class InputMonitor : MonoBehaviour
             if (raycastHit.transform.gameObject != null) Debug.Log("Object: " + raycastHit.transform.gameObject.name);
             else Debug.Log("Nuthin");
 
-            //sends a message to the ui panels that need the collision info
-            //SelectPressed?.Invoke(this, leftHand);
-            panel.Select(leftHand);
+            //anything subscribed can now draw/measure
+            //Draw?.Invoke(this, leftHand);
         }
         else Debug.Log("No raycast hit");
 
     }
 
-    private void OnRightSelect(InputValue value)
-    {
-        Debug.Log("right hand");
+    HandInputInfo LeftHand = new HandInputInfo();
+    HandInputInfo RightHand = new HandInputInfo();
 
+    private void Awake()
+    {
+        //left
+        LeftHand.Hand = Common.Hand.Left;
+        LeftHand.HandTransform = lTransform;
+
+        RightHand.Hand = Common.Hand.Right;
+        RightHand.HandTransform = rTransform;
     }
 
-    public void SwitchToMeasureControls()
+    private void UpdateRaycastCollisionsForHand(XRRayInteractor rayInteractor, HandInputInfo hand)
     {
-        playerInput.SwitchCurrentActionMap("XRI Interaction");
+        RaycastHit raycastHit;
+        if (rayInteractor.TryGetCurrent3DRaycastHit(out raycastHit))
+        {
+            hand.PointerCollisionInfo = new Common.PointerCollisionInfo()
+            {
+                collidedWith = raycastHit.transform.gameObject,
+                worldPosition = raycastHit.point,
+                worldNormal = raycastHit.normal,
+                distance = raycastHit.distance
+
+            };
+
+/*            if (raycastHit.transform.gameObject != null) Debug.Log("Object: " + raycastHit.transform.gameObject.name);
+            else Debug.Log("Nuthin");*/
+        }
+        //else Debug.Log("No raycast hit");
     }
 
-    public void SwitchToGrabControls()
+    public HandInputInfo GetHandInput(Tracking tracking)
     {
-        //needs a better name
-        //default controls
+        if (tracking == Tracking.Left)
+        {
+            UpdateRaycastCollisionsForHand(leftRaycast, LeftHand);
+            return LeftHand;
+        }
+        else if (tracking == Tracking.Right)
+        {
+            UpdateRaycastCollisionsForHand(rightRaycast, RightHand);
+            return RightHand;
+        }
+        else { return null; }
     }
 }

@@ -6338,50 +6338,50 @@ struct CreateRuntimePanelDelegate_t7E3FB54A953B205ED387CEDE488C803E18813B91  : p
 struct BaseField_1_t33E37D3A182C1DDE900EA4039FE03BF68FD0CD26  : public BindableElement_t873EFF65032D21AB3B7BFBA21675D1693967435C
 {
 	// System.Single UnityEngine.UIElements.BaseField`1::m_LabelWidthRatio
-	float ___m_LabelWidthRatio_80;
+	float ___m_LabelWidthRatio_81;
 	// System.Single UnityEngine.UIElements.BaseField`1::m_LabelExtraPadding
-	float ___m_LabelExtraPadding_81;
+	float ___m_LabelExtraPadding_82;
 	// System.Single UnityEngine.UIElements.BaseField`1::m_LabelBaseMinWidth
-	float ___m_LabelBaseMinWidth_82;
+	float ___m_LabelBaseMinWidth_83;
 	// UnityEngine.UIElements.VisualElement UnityEngine.UIElements.BaseField`1::m_VisualInput
-	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___m_VisualInput_83;
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___m_VisualInput_84;
 	// TValueType UnityEngine.UIElements.BaseField`1::m_Value
-	bool ___m_Value_84;
+	bool ___m_Value_85;
 	// UnityEngine.UIElements.Label UnityEngine.UIElements.BaseField`1::<labelElement>k__BackingField
-	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* ___U3ClabelElementU3Ek__BackingField_85;
+	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* ___U3ClabelElementU3Ek__BackingField_86;
 	// System.Boolean UnityEngine.UIElements.BaseField`1::m_ShowMixedValue
-	bool ___m_ShowMixedValue_86;
+	bool ___m_ShowMixedValue_87;
 	// UnityEngine.UIElements.Label UnityEngine.UIElements.BaseField`1::m_MixedValueLabel
-	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* ___m_MixedValueLabel_87;
+	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* ___m_MixedValueLabel_88;
 	// UnityEngine.UIElements.VisualElement UnityEngine.UIElements.BaseField`1::m_CachedInspectorElement
-	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___m_CachedInspectorElement_88;
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___m_CachedInspectorElement_89;
 	// System.Int32 UnityEngine.UIElements.BaseField`1::m_CachedListAndFoldoutDepth
-	int32_t ___m_CachedListAndFoldoutDepth_89;
+	int32_t ___m_CachedListAndFoldoutDepth_90;
 };
 
 // UnityEngine.UIElements.BaseField`1<System.Single>
 struct BaseField_1_t1BD309672FAB87887168305A09C320E26F166DA7  : public BindableElement_t873EFF65032D21AB3B7BFBA21675D1693967435C
 {
 	// System.Single UnityEngine.UIElements.BaseField`1::m_LabelWidthRatio
-	float ___m_LabelWidthRatio_80;
+	float ___m_LabelWidthRatio_81;
 	// System.Single UnityEngine.UIElements.BaseField`1::m_LabelExtraPadding
-	float ___m_LabelExtraPadding_81;
+	float ___m_LabelExtraPadding_82;
 	// System.Single UnityEngine.UIElements.BaseField`1::m_LabelBaseMinWidth
-	float ___m_LabelBaseMinWidth_82;
+	float ___m_LabelBaseMinWidth_83;
 	// UnityEngine.UIElements.VisualElement UnityEngine.UIElements.BaseField`1::m_VisualInput
-	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___m_VisualInput_83;
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___m_VisualInput_84;
 	// TValueType UnityEngine.UIElements.BaseField`1::m_Value
-	float ___m_Value_84;
+	float ___m_Value_85;
 	// UnityEngine.UIElements.Label UnityEngine.UIElements.BaseField`1::<labelElement>k__BackingField
-	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* ___U3ClabelElementU3Ek__BackingField_85;
+	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* ___U3ClabelElementU3Ek__BackingField_86;
 	// System.Boolean UnityEngine.UIElements.BaseField`1::m_ShowMixedValue
-	bool ___m_ShowMixedValue_86;
+	bool ___m_ShowMixedValue_87;
 	// UnityEngine.UIElements.Label UnityEngine.UIElements.BaseField`1::m_MixedValueLabel
-	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* ___m_MixedValueLabel_87;
+	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* ___m_MixedValueLabel_88;
 	// UnityEngine.UIElements.VisualElement UnityEngine.UIElements.BaseField`1::m_CachedInspectorElement
-	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___m_CachedInspectorElement_88;
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___m_CachedInspectorElement_89;
 	// System.Int32 UnityEngine.UIElements.BaseField`1::m_CachedListAndFoldoutDepth
-	int32_t ___m_CachedListAndFoldoutDepth_89;
+	int32_t ___m_CachedListAndFoldoutDepth_90;
 };
 
 // System.ArgumentNullException
@@ -6653,44 +6653,44 @@ struct UxmlTraits_tEB183E6CCCED03B250C5B72A6A759513B7E2BA61  : public BaseFieldT
 struct BaseSlider_1_t72796443D058B00401238104911BE7078A9FD0BA  : public BaseField_1_t1BD309672FAB87887168305A09C320E26F166DA7
 {
 	// UnityEngine.UIElements.VisualElement UnityEngine.UIElements.BaseSlider`1::<dragContainer>k__BackingField
-	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___U3CdragContainerU3Ek__BackingField_90;
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___U3CdragContainerU3Ek__BackingField_91;
 	// UnityEngine.UIElements.VisualElement UnityEngine.UIElements.BaseSlider`1::<dragElement>k__BackingField
-	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___U3CdragElementU3Ek__BackingField_91;
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___U3CdragElementU3Ek__BackingField_92;
 	// UnityEngine.UIElements.VisualElement UnityEngine.UIElements.BaseSlider`1::<dragBorderElement>k__BackingField
-	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___U3CdragBorderElementU3Ek__BackingField_92;
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___U3CdragBorderElementU3Ek__BackingField_93;
 	// UnityEngine.UIElements.TextField UnityEngine.UIElements.BaseSlider`1::<inputTextField>k__BackingField
-	TextField_tDB34369F9468D7F02670087D9444EC23115827D9* ___U3CinputTextFieldU3Ek__BackingField_93;
+	TextField_tDB34369F9468D7F02670087D9444EC23115827D9* ___U3CinputTextFieldU3Ek__BackingField_94;
 	// TValueType UnityEngine.UIElements.BaseSlider`1::m_LowValue
-	float ___m_LowValue_94;
+	float ___m_LowValue_95;
 	// TValueType UnityEngine.UIElements.BaseSlider`1::m_HighValue
-	float ___m_HighValue_95;
+	float ___m_HighValue_96;
 	// System.Single UnityEngine.UIElements.BaseSlider`1::m_PageSize
-	float ___m_PageSize_96;
+	float ___m_PageSize_97;
 	// System.Boolean UnityEngine.UIElements.BaseSlider`1::m_ShowInputField
-	bool ___m_ShowInputField_97;
+	bool ___m_ShowInputField_98;
 	// System.Boolean UnityEngine.UIElements.BaseSlider`1::<clamped>k__BackingField
-	bool ___U3CclampedU3Ek__BackingField_98;
+	bool ___U3CclampedU3Ek__BackingField_99;
 	// UnityEngine.UIElements.ClampedDragger`1<TValueType> UnityEngine.UIElements.BaseSlider`1::<clampedDragger>k__BackingField
-	ClampedDragger_1_t18A937D027747303C3811CCC9FAD288366DF8DC3* ___U3CclampedDraggerU3Ek__BackingField_99;
+	ClampedDragger_1_t18A937D027747303C3811CCC9FAD288366DF8DC3* ___U3CclampedDraggerU3Ek__BackingField_100;
 	// UnityEngine.Rect UnityEngine.UIElements.BaseSlider`1::m_DragElementStartPos
-	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___m_DragElementStartPos_100;
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___m_DragElementStartPos_101;
 	// UnityEngine.UIElements.SliderDirection UnityEngine.UIElements.BaseSlider`1::m_Direction
-	int32_t ___m_Direction_101;
+	int32_t ___m_Direction_102;
 	// System.Boolean UnityEngine.UIElements.BaseSlider`1::m_Inverted
-	bool ___m_Inverted_102;
+	bool ___m_Inverted_103;
 };
 
 // UnityEngine.UIElements.BaseBoolField
 struct BaseBoolField_t01F8AFD72D18F0EB65F949062615550A9ED30B0D  : public BaseField_1_t33E37D3A182C1DDE900EA4039FE03BF68FD0CD26
 {
 	// UnityEngine.UIElements.Label UnityEngine.UIElements.BaseBoolField::m_Label
-	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* ___m_Label_90;
+	Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* ___m_Label_91;
 	// UnityEngine.UIElements.VisualElement UnityEngine.UIElements.BaseBoolField::m_CheckMark
-	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___m_CheckMark_91;
+	VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* ___m_CheckMark_92;
 	// UnityEngine.UIElements.Clickable UnityEngine.UIElements.BaseBoolField::m_Clickable
-	Clickable_tED3E313565F64BDF5DA9D3FE0FEFFD0E17E53834* ___m_Clickable_92;
+	Clickable_tED3E313565F64BDF5DA9D3FE0FEFFD0E17E53834* ___m_Clickable_93;
 	// System.String UnityEngine.UIElements.BaseBoolField::m_OriginalText
-	String_t* ___m_OriginalText_93;
+	String_t* ___m_OriginalText_94;
 };
 
 // UnityEngine.UIElements.Label
@@ -8407,15 +8407,15 @@ struct BaseField_1_t33E37D3A182C1DDE900EA4039FE03BF68FD0CD26_StaticFields
 	// System.String UnityEngine.UIElements.BaseField`1::inspectorFieldUssClassName
 	String_t* ___inspectorFieldUssClassName_74;
 	// System.String UnityEngine.UIElements.BaseField`1::mixedValueString
-	String_t* ___mixedValueString_75;
+	String_t* ___mixedValueString_76;
 	// UnityEngine.PropertyName UnityEngine.UIElements.BaseField`1::serializedPropertyCopyName
-	PropertyName_tE4B4AAA58AF3BF2C0CD95509EB7B786F096901C2 ___serializedPropertyCopyName_76;
+	PropertyName_tE4B4AAA58AF3BF2C0CD95509EB7B786F096901C2 ___serializedPropertyCopyName_77;
 	// UnityEngine.UIElements.CustomStyleProperty`1<System.Single> UnityEngine.UIElements.BaseField`1::s_LabelWidthRatioProperty
-	CustomStyleProperty_1_t21332918528099194FD36C74FF0FA14696F39493 ___s_LabelWidthRatioProperty_77;
+	CustomStyleProperty_1_t21332918528099194FD36C74FF0FA14696F39493 ___s_LabelWidthRatioProperty_78;
 	// UnityEngine.UIElements.CustomStyleProperty`1<System.Single> UnityEngine.UIElements.BaseField`1::s_LabelExtraPaddingProperty
-	CustomStyleProperty_1_t21332918528099194FD36C74FF0FA14696F39493 ___s_LabelExtraPaddingProperty_78;
+	CustomStyleProperty_1_t21332918528099194FD36C74FF0FA14696F39493 ___s_LabelExtraPaddingProperty_79;
 	// UnityEngine.UIElements.CustomStyleProperty`1<System.Single> UnityEngine.UIElements.BaseField`1::s_LabelBaseMinWidthProperty
-	CustomStyleProperty_1_t21332918528099194FD36C74FF0FA14696F39493 ___s_LabelBaseMinWidthProperty_79;
+	CustomStyleProperty_1_t21332918528099194FD36C74FF0FA14696F39493 ___s_LabelBaseMinWidthProperty_80;
 };
 
 // UnityEngine.UIElements.BaseField`1<System.Boolean>
@@ -8440,15 +8440,15 @@ struct BaseField_1_t1BD309672FAB87887168305A09C320E26F166DA7_StaticFields
 	// System.String UnityEngine.UIElements.BaseField`1::inspectorFieldUssClassName
 	String_t* ___inspectorFieldUssClassName_74;
 	// System.String UnityEngine.UIElements.BaseField`1::mixedValueString
-	String_t* ___mixedValueString_75;
+	String_t* ___mixedValueString_76;
 	// UnityEngine.PropertyName UnityEngine.UIElements.BaseField`1::serializedPropertyCopyName
-	PropertyName_tE4B4AAA58AF3BF2C0CD95509EB7B786F096901C2 ___serializedPropertyCopyName_76;
+	PropertyName_tE4B4AAA58AF3BF2C0CD95509EB7B786F096901C2 ___serializedPropertyCopyName_77;
 	// UnityEngine.UIElements.CustomStyleProperty`1<System.Single> UnityEngine.UIElements.BaseField`1::s_LabelWidthRatioProperty
-	CustomStyleProperty_1_t21332918528099194FD36C74FF0FA14696F39493 ___s_LabelWidthRatioProperty_77;
+	CustomStyleProperty_1_t21332918528099194FD36C74FF0FA14696F39493 ___s_LabelWidthRatioProperty_78;
 	// UnityEngine.UIElements.CustomStyleProperty`1<System.Single> UnityEngine.UIElements.BaseField`1::s_LabelExtraPaddingProperty
-	CustomStyleProperty_1_t21332918528099194FD36C74FF0FA14696F39493 ___s_LabelExtraPaddingProperty_78;
+	CustomStyleProperty_1_t21332918528099194FD36C74FF0FA14696F39493 ___s_LabelExtraPaddingProperty_79;
 	// UnityEngine.UIElements.CustomStyleProperty`1<System.Single> UnityEngine.UIElements.BaseField`1::s_LabelBaseMinWidthProperty
-	CustomStyleProperty_1_t21332918528099194FD36C74FF0FA14696F39493 ___s_LabelBaseMinWidthProperty_79;
+	CustomStyleProperty_1_t21332918528099194FD36C74FF0FA14696F39493 ___s_LabelBaseMinWidthProperty_80;
 };
 
 // UnityEngine.UIElements.BaseField`1<System.Single>
@@ -8627,25 +8627,25 @@ struct TextElement_tD56C5044CCC5552285DC8A9950CC60448C80FEE0_StaticFields
 struct BaseSlider_1_t72796443D058B00401238104911BE7078A9FD0BA_StaticFields
 {
 	// System.String UnityEngine.UIElements.BaseSlider`1::ussClassName
-	String_t* ___ussClassName_103;
+	String_t* ___ussClassName_107;
 	// System.String UnityEngine.UIElements.BaseSlider`1::labelUssClassName
-	String_t* ___labelUssClassName_104;
+	String_t* ___labelUssClassName_108;
 	// System.String UnityEngine.UIElements.BaseSlider`1::inputUssClassName
-	String_t* ___inputUssClassName_105;
+	String_t* ___inputUssClassName_109;
 	// System.String UnityEngine.UIElements.BaseSlider`1::horizontalVariantUssClassName
-	String_t* ___horizontalVariantUssClassName_106;
+	String_t* ___horizontalVariantUssClassName_110;
 	// System.String UnityEngine.UIElements.BaseSlider`1::verticalVariantUssClassName
-	String_t* ___verticalVariantUssClassName_107;
+	String_t* ___verticalVariantUssClassName_111;
 	// System.String UnityEngine.UIElements.BaseSlider`1::dragContainerUssClassName
-	String_t* ___dragContainerUssClassName_108;
+	String_t* ___dragContainerUssClassName_112;
 	// System.String UnityEngine.UIElements.BaseSlider`1::trackerUssClassName
-	String_t* ___trackerUssClassName_109;
+	String_t* ___trackerUssClassName_113;
 	// System.String UnityEngine.UIElements.BaseSlider`1::draggerUssClassName
-	String_t* ___draggerUssClassName_110;
+	String_t* ___draggerUssClassName_114;
 	// System.String UnityEngine.UIElements.BaseSlider`1::draggerBorderUssClassName
-	String_t* ___draggerBorderUssClassName_111;
+	String_t* ___draggerBorderUssClassName_115;
 	// System.String UnityEngine.UIElements.BaseSlider`1::textFieldClassName
-	String_t* ___textFieldClassName_112;
+	String_t* ___textFieldClassName_116;
 };
 
 // UnityEngine.UIElements.BaseSlider`1<System.Single>
@@ -8731,11 +8731,11 @@ struct UIDocument_t4186BEBCC01278F63B895274AA08AD9ADFBF4C77_StaticFields
 struct Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields
 {
 	// System.String UnityEngine.UIElements.Slider::ussClassName
-	String_t* ___ussClassName_113;
+	String_t* ___ussClassName_118;
 	// System.String UnityEngine.UIElements.Slider::labelUssClassName
-	String_t* ___labelUssClassName_114;
+	String_t* ___labelUssClassName_119;
 	// System.String UnityEngine.UIElements.Slider::inputUssClassName
-	String_t* ___inputUssClassName_115;
+	String_t* ___inputUssClassName_120;
 };
 
 // UnityEngine.UIElements.Slider
@@ -8744,17 +8744,17 @@ struct Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields
 struct Toggle_t27BE43456B97DD7A793D272D3318F9FE682B844C_StaticFields
 {
 	// System.String UnityEngine.UIElements.Toggle::ussClassName
-	String_t* ___ussClassName_94;
+	String_t* ___ussClassName_95;
 	// System.String UnityEngine.UIElements.Toggle::labelUssClassName
-	String_t* ___labelUssClassName_95;
+	String_t* ___labelUssClassName_96;
 	// System.String UnityEngine.UIElements.Toggle::inputUssClassName
-	String_t* ___inputUssClassName_96;
+	String_t* ___inputUssClassName_97;
 	// System.String UnityEngine.UIElements.Toggle::noTextVariantUssClassName
-	String_t* ___noTextVariantUssClassName_97;
+	String_t* ___noTextVariantUssClassName_98;
 	// System.String UnityEngine.UIElements.Toggle::checkmarkUssClassName
-	String_t* ___checkmarkUssClassName_98;
+	String_t* ___checkmarkUssClassName_99;
 	// System.String UnityEngine.UIElements.Toggle::textUssClassName
-	String_t* ___textUssClassName_99;
+	String_t* ___textUssClassName_100;
 };
 
 // UnityEngine.UIElements.Toggle
@@ -12283,7 +12283,7 @@ IL_0022_1:
 				L_14 = Object_GetType_mE10A8FC1E57F3DF29972CCBC026C2DC3942263B3(L_13, NULL);
 				NullCheck(L_14);
 				String_t* L_15;
-				L_15 = VirtualFuncInvoker0< String_t* >::Invoke(25 /* System.String System.Type::get_FullName() */, L_14);
+				L_15 = VirtualFuncInvoker0< String_t* >::Invoke(26 /* System.String System.Type::get_FullName() */, L_14);
 				String_t* L_16;
 				L_16 = String_Concat_m8855A6DE10F84DA7F4EC113CADDB59873A25573B(((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteral7AF912EF574F4A4B8D1684A357C31BA4899E2630)), L_15, ((String_t*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&_stringLiteralA09E2059CFC087EDA705E84D3AECFCB7D8744B91)), NULL);
 				ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263* L_17 = (ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263*)il2cpp_codegen_object_new(((RuntimeClass*)il2cpp_codegen_initialize_runtime_metadata_inline((uintptr_t*)&ArgumentException_tAD90411542A20A9C72D5CDA3A84181D8B947A263_il2cpp_TypeInfo_var)));
@@ -12764,7 +12764,7 @@ IL_0021:
 		Assembly_t* L_10 = V_4;
 		NullCheck(L_10);
 		AssemblyName_t555F1570F523D87D970C6E7F27B1B44C83EADDD2* L_11;
-		L_11 = VirtualFuncInvoker0< AssemblyName_t555F1570F523D87D970C6E7F27B1B44C83EADDD2* >::Invoke(17 /* System.Reflection.AssemblyName System.Reflection.Assembly::GetName() */, L_10);
+		L_11 = VirtualFuncInvoker0< AssemblyName_t555F1570F523D87D970C6E7F27B1B44C83EADDD2* >::Invoke(19 /* System.Reflection.AssemblyName System.Reflection.Assembly::GetName() */, L_10);
 		NullCheck(L_11);
 		String_t* L_12;
 		L_12 = AssemblyName_get_Name_m7899B9B3F289EEBAF62AEAB51D1CA91DA92C4E6A_inline(L_11, NULL);
@@ -12782,7 +12782,7 @@ IL_0021:
 		Assembly_t* L_15 = V_4;
 		NullCheck(L_15);
 		AssemblyName_t555F1570F523D87D970C6E7F27B1B44C83EADDD2* L_16;
-		L_16 = VirtualFuncInvoker0< AssemblyName_t555F1570F523D87D970C6E7F27B1B44C83EADDD2* >::Invoke(17 /* System.Reflection.AssemblyName System.Reflection.Assembly::GetName() */, L_15);
+		L_16 = VirtualFuncInvoker0< AssemblyName_t555F1570F523D87D970C6E7F27B1B44C83EADDD2* >::Invoke(19 /* System.Reflection.AssemblyName System.Reflection.Assembly::GetName() */, L_15);
 		NullCheck(L_16);
 		String_t* L_17;
 		L_17 = AssemblyName_get_Name_m7899B9B3F289EEBAF62AEAB51D1CA91DA92C4E6A_inline(L_16, NULL);
@@ -12815,7 +12815,7 @@ IL_0066:
 		Assembly_t* L_20 = V_4;
 		NullCheck(L_20);
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_21;
-		L_21 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(14 /* System.Type[] System.Reflection.Assembly::GetTypes() */, L_20);
+		L_21 = VirtualFuncInvoker0< TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* >::Invoke(16 /* System.Type[] System.Reflection.Assembly::GetTypes() */, L_20);
 		V_5 = L_21;
 		TypeU5BU5D_t97234E1129B564EB38B8D85CAC2AD8B5B9522FFB* L_22 = V_5;
 		V_7 = L_22;
@@ -12838,7 +12838,7 @@ IL_0079:
 		Type_t* L_29 = V_9;
 		NullCheck(L_28);
 		bool L_30;
-		L_30 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(21 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_28, L_29);
+		L_30 = VirtualFuncInvoker1< bool, Type_t* >::Invoke(22 /* System.Boolean System.Type::IsAssignableFrom(System.Type) */, L_28, L_29);
 		if (!L_30)
 		{
 			goto IL_00af;
@@ -12868,7 +12868,7 @@ IL_0079:
 		Type_t* L_35 = V_9;
 		NullCheck(L_35);
 		bool L_36;
-		L_36 = VirtualFuncInvoker0< bool >::Invoke(39 /* System.Boolean System.Type::get_IsGenericType() */, L_35);
+		L_36 = VirtualFuncInvoker0< bool >::Invoke(40 /* System.Boolean System.Type::get_IsGenericType() */, L_35);
 		G_B12_0 = ((int32_t)(L_36));
 		goto IL_00b0;
 	}
@@ -15047,7 +15047,7 @@ IL_00fe:
 		L_42 = Type_GetTypeFromHandle_m6062B81682F79A4D6DF2640692EE6D9987858C57(L_41, NULL);
 		NullCheck(L_42);
 		String_t* L_43;
-		L_43 = VirtualFuncInvoker0< String_t* >::Invoke(23 /* System.String System.Type::get_Namespace() */, L_42);
+		L_43 = VirtualFuncInvoker0< String_t* >::Invoke(24 /* System.String System.Type::get_Namespace() */, L_42);
 		U3CU3Ec__DisplayClass49_0_t15D6F8899A5A974A6A4531B01C67BD951257E3F3 L_44 = V_0;
 		VisualElementAsset_t558B207D551F8C727D1CD0F443F7211D095C3FA9* L_45 = L_44.___asset_0;
 		NullCheck(L_45);
@@ -23751,11 +23751,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_3 = __this->___m_TargetTexture_8;
 		NullCheck(L_3);
 		int32_t L_4;
-		L_4 = VirtualFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_3);
+		L_4 = VirtualFuncInvoker0< int32_t >::Invoke(5 /* System.Int32 UnityEngine.Texture::get_width() */, L_3);
 		RenderTexture_tBA90C4C3AD9EECCFDDCC632D97C29FAB80D60D27* L_5 = __this->___m_TargetTexture_8;
 		NullCheck(L_5);
 		int32_t L_6;
-		L_6 = VirtualFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_5);
+		L_6 = VirtualFuncInvoker0< int32_t >::Invoke(7 /* System.Int32 UnityEngine.Texture::get_height() */, L_5);
 		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_7;
 		memset((&L_7), 0, sizeof(L_7));
 		Rect__ctor_m18C3033D135097BEE424AAA68D91C706D2647F23((&L_7), (0.0f), (0.0f), ((float)L_4), ((float)L_6), /*hidden argument*/NULL);
@@ -27094,16 +27094,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Slider__ctor_m0ED43D32A529649E6C1DE01F2A
 		il2cpp_codegen_runtime_class_init_inline(BaseSlider_1_t72796443D058B00401238104911BE7078A9FD0BA_il2cpp_TypeInfo_var);
 		BaseSlider_1__ctor_mE602DADCF973601966CEDFA7E3C4942CA2CF9C32(__this, L_0, L_1, L_2, L_3, L_4, BaseSlider_1__ctor_mE602DADCF973601966CEDFA7E3C4942CA2CF9C32_RuntimeMethod_var);
 		il2cpp_codegen_runtime_class_init_inline(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var);
-		String_t* L_5 = ((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___ussClassName_113;
+		String_t* L_5 = ((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___ussClassName_118;
 		VisualElement_AddToClassList_mAF0DD8D8CFD5130229A0471DD260E01ED82117F1(__this, L_5, NULL);
 		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_6;
 		L_6 = BaseField_1_get_labelElement_mDEBB31CB4CDE42C577E6DDCA0BBFC6B1FFB03BBF_inline(__this, BaseField_1_get_labelElement_mDEBB31CB4CDE42C577E6DDCA0BBFC6B1FFB03BBF_RuntimeMethod_var);
-		String_t* L_7 = ((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___labelUssClassName_114;
+		String_t* L_7 = ((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___labelUssClassName_119;
 		NullCheck(L_6);
 		VisualElement_AddToClassList_mAF0DD8D8CFD5130229A0471DD260E01ED82117F1(L_6, L_7, NULL);
 		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_8;
 		L_8 = BaseField_1_get_visualInput_m7AAFD7F9915155E44A3FB4B634E1946F85387945(__this, BaseField_1_get_visualInput_m7AAFD7F9915155E44A3FB4B634E1946F85387945_RuntimeMethod_var);
-		String_t* L_9 = ((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___inputUssClassName_115;
+		String_t* L_9 = ((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___inputUssClassName_120;
 		NullCheck(L_8);
 		VisualElement_AddToClassList_mAF0DD8D8CFD5130229A0471DD260E01ED82117F1(L_8, L_9, NULL);
 		return;
@@ -27489,18 +27489,18 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Slider__cctor_m8B669703E1F35843F3EED782D
 		s_Il2CppMethodInitialized = true;
 	}
 	{
-		((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___ussClassName_113 = _stringLiteralBE0A31A6C4D3B145E7B1FA25CFACE595B88306DC;
-		Il2CppCodeGenWriteBarrier((void**)(&((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___ussClassName_113), (void*)_stringLiteralBE0A31A6C4D3B145E7B1FA25CFACE595B88306DC);
-		String_t* L_0 = ((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___ussClassName_113;
+		((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___ussClassName_118 = _stringLiteralBE0A31A6C4D3B145E7B1FA25CFACE595B88306DC;
+		Il2CppCodeGenWriteBarrier((void**)(&((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___ussClassName_118), (void*)_stringLiteralBE0A31A6C4D3B145E7B1FA25CFACE595B88306DC);
+		String_t* L_0 = ((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___ussClassName_118;
 		String_t* L_1;
 		L_1 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_0, _stringLiteralB33F63A61DAA3D769F026D737C92DB30774A8A1B, NULL);
-		((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___labelUssClassName_114 = L_1;
-		Il2CppCodeGenWriteBarrier((void**)(&((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___labelUssClassName_114), (void*)L_1);
-		String_t* L_2 = ((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___ussClassName_113;
+		((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___labelUssClassName_119 = L_1;
+		Il2CppCodeGenWriteBarrier((void**)(&((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___labelUssClassName_119), (void*)L_1);
+		String_t* L_2 = ((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___ussClassName_118;
 		String_t* L_3;
 		L_3 = String_Concat_m9E3155FB84015C823606188F53B47CB44C444991(L_2, _stringLiteralFA260FC853CB4AA8AF3AC7F64023DE48E0B01E64, NULL);
-		((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___inputUssClassName_115 = L_3;
-		Il2CppCodeGenWriteBarrier((void**)(&((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___inputUssClassName_115), (void*)L_3);
+		((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___inputUssClassName_120 = L_3;
+		Il2CppCodeGenWriteBarrier((void**)(&((Slider_t5891706383A14955E3FAD68A79829F3234681652_StaticFields*)il2cpp_codegen_static_fields_for(Slider_t5891706383A14955E3FAD68A79829F3234681652_il2cpp_TypeInfo_var))->___inputUssClassName_120), (void*)L_3);
 		return;
 	}
 }
@@ -37528,21 +37528,21 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Stack_1_get_Count_mD08AE7
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* BaseField_1_get_labelElement_mDEBB31CB4CDE42C577E6DDCA0BBFC6B1FFB03BBF_gshared_inline (BaseField_1_t1BD309672FAB87887168305A09C320E26F166DA7* __this, const RuntimeMethod* method) 
 {
 	{
-		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_0 = (Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70*)__this->___U3ClabelElementU3Ek__BackingField_85;
+		Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70* L_0 = (Label_tC160668F9119CE0F5567021FB208E64A5B1C5B70*)__this->___U3ClabelElementU3Ek__BackingField_86;
 		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* BaseSlider_1_get_dragContainer_m2A4A2BD64B8BBACAD28E0133E06B109D045F2AB1_gshared_inline (BaseSlider_1_t72796443D058B00401238104911BE7078A9FD0BA* __this, const RuntimeMethod* method) 
 {
 	{
-		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_0 = (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115*)__this->___U3CdragContainerU3Ek__BackingField_90;
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_0 = (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115*)__this->___U3CdragContainerU3Ek__BackingField_91;
 		return L_0;
 	}
 }
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* BaseSlider_1_get_dragElement_m032210456947E23683D74C074CC01AFE210169EB_gshared_inline (BaseSlider_1_t72796443D058B00401238104911BE7078A9FD0BA* __this, const RuntimeMethod* method) 
 {
 	{
-		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_0 = (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115*)__this->___U3CdragElementU3Ek__BackingField_91;
+		VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115* L_0 = (VisualElement_t2667F9D19E62C7A315927506C06F223AB9234115*)__this->___U3CdragElementU3Ek__BackingField_92;
 		return L_0;
 	}
 }
@@ -37586,7 +37586,7 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void BaseSlider_1_set_clamped_m8C
 {
 	{
 		bool L_0 = ___0_value;
-		__this->___U3CclampedU3Ek__BackingField_98 = L_0;
+		__this->___U3CclampedU3Ek__BackingField_99 = L_0;
 		return;
 	}
 }

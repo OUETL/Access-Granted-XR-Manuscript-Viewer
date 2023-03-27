@@ -33,9 +33,6 @@ namespace OU.OVAL
         //
         // Internals
         //
-       
-
-
         Core.Annotation doodle = new Core.Annotation();
         Core.AnnotationRender doodleRender = new Core.AnnotationRender();
         Core.OVALObject measureTarget = null;
@@ -153,8 +150,6 @@ namespace OU.OVAL
                         var lActive = common.inputWrapper.GetLeft().Pressed(Core.Constants.ButtonFlags.Trigger);
                         var rActive = common.inputWrapper.GetRight().Pressed(Core.Constants.ButtonFlags.Trigger);
 
-            var lActive = false;
-            var rActive = false;
 
             bool dropPoint = false;   // drop a new point in the measurement
             bool trackCursor = true;  // connect the last dropped point to the current cursor position
@@ -339,6 +334,88 @@ namespace OU.OVAL
 
         }
 
+
+        public void Draw(InputMonitor.HandInputInfo inputInfo)
+        {
+            Debug.Log(inputInfo.ToString());
+
+            bool dropPoint = false;   // drop a new point in the measurement
+            bool trackCursor = true;  // connect the last dropped point to the current cursor position
+
+            var common = Common.Instance;
+            Vector3 collidedAt = Vector3.zero;
+
+            //
+            // Update tracking & click status
+            //
+            if (inputInfo.Hand != Hand.Neither)
+            {
+                // Very first click in the whole measurement?
+                if (tracking == Tracking.None)
+                {
+                    tracking = (inputInfo.Hand == Hand.Left) ? (Tracking.Left) : (Tracking.Right);
+                }
+
+                // First frame of a click along the measurement; drop a point.
+                if (clickDown == false)
+                {
+                    dropPoint = true;
+                }
+
+                clickDown = true;
+            }
+            else
+            {
+                clickDown = false;
+            }
+
+            //
+            // If we're not tracking anything, stop here.
+            //
+            if (tracking == Tracking.None) return;
+
+            //
+            // Check for collisions of pointer and UI / scene objects.
+            //
+            // Core.Common.PointerCollisionInfo collision = (tracking == Tracking.Left) ? common.lCollision : common.rCollision;
+            PointerCollisionInfo collision = inputInfo.PointerCollisionInfo;
+            collidedAt = collision.worldPosition + (collision.worldNormal * surfaceOffset);
+
+
+            GameObject collidedWithOO = collision.collidedWith;
+            //if (!measureTarget && collidedWithOO) measureTarget = collidedWithOO;
+
+            //
+            // Determine whether to join the current cursor position to the last dropped point.
+            //
+            if (measureOnSurface)
+            {
+                if (!collidedWithOO) trackCursor = false;
+                if (collidedWithOO != measureTarget) trackCursor = false;
+            }
+
+            //
+            // At this point, we have all the information we need to manipulate the points etc
+            //
+
+            var controllerTransform = inputInfo.HandTransform;
+            var pos = (measureOnSurface) ? (collidedAt) : (controllerTransform.position);
+
+            if (dropPoint) // && trackCursor)
+            {
+                doodle.AddPoint(pos);
+                if (doodle.sections[0].Count == 1) doodle.AddPoint(pos); // Also add cursor tracking point, if first point in measurement
+                                                                         //if (newButton && !newButton.interactable) newButton.interactable = true;
+                                                                         //Debug.LogWarning( $"{doodle.sections.Count} {doodle.sections[0].Count}" );
+            }
+
+            int N = doodle.sections[0].Count;
+            if (N > 1) // should always be true at this point, but just in case!
+            {
+                doodle.sections[0][N - 1] = trackCursor ? pos : doodle.sections[0][N - 2];
+                UpdateDoodle();
+            }
+        }
 
     }
 
