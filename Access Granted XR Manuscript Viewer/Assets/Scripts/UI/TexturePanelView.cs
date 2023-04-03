@@ -24,19 +24,11 @@ public class TexturePanelView : MonoBehaviour
 
         leftToggle.alternateTexture = alternateTexture;
         rightToggle.alternateTexture = alternateTexture;
-
-        Testing();
     }
 
     //enable/disable right book
     void ViewToggleValueChanged(Toggle change)
     {
         rightToggle.ToggleEnable(change.isOn);
-    }
-
-    public void Testing()
-    {
-        rightToggle.ChangePage(right);
-        leftToggle.ChangePage(left);
     }
 }

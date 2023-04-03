@@ -30,7 +30,6 @@ public class InputMonitor : MonoBehaviour
 
     // Left and right controller transforms
     public Transform lTransform, rTransform;
-    public MeasurePanel panel;
     public PlayerInput playerInput;
 
     public void ChangeInteractionLayer()
@@ -91,11 +90,7 @@ public class InputMonitor : MonoBehaviour
                 distance = raycastHit.distance
 
             };
-
-/*            if (raycastHit.transform.gameObject != null) Debug.Log("Object: " + raycastHit.transform.gameObject.name);
-            else Debug.Log("Nuthin");*/
         }
-        //else Debug.Log("No raycast hit");
     }
 
     public HandInputInfo GetHandInput(Tracking tracking)
