@@ -86,13 +86,13 @@ namespace OU.OVAL.Core
         // any Update() methods, so results should be available for use in any object's Update():
         // https://docs.unity3d.com/Manual/ExecutionOrder.html
         //
-        private void FixedUpdate()
+/*        private void FixedUpdate()
         {
             lCollision.collidedWith = null;
             rCollision.collidedWith = null;
             int temp;
             bool validTarget;
-/*            RaycastHit raycastHit;
+            RaycastHit raycastHit;
             //left
             //if (leftRaycast.TryGetHitInfo(out lCollision.worldPosition, out lCollision.worldNormal, out temp, out validTarget))
             if (leftRaycast.TryGetCurrent3DRaycastHit(out raycastHit))
@@ -101,40 +101,37 @@ namespace OU.OVAL.Core
 
                 if (raycastHit.transform.gameObject != null) Debug.Log("Object:" + raycastHit.transform.gameObject.name);
                 else Debug.Log("Nuthin");
-               
-               // leftRaycast.GetCurrentRaycastHit(out raycastHit);
-               // raycastHit.
+
+                // leftRaycast.GetCurrentRaycastHit(out raycastHit);
+                // raycastHit.
             }
-            else Debug.Log("Nuthin");*/
-
-            //right
-            //rightRaycast.TryGetHitInfo(out rCollision.worldPosition, out rCollision.worldNormal, out temp, out validTarget);
+            else Debug.Log("Nuthin");
 
 
-            /*            // Left
-                        {
-                            var srr = Instance.lRaycaster.SortedRaycastResults;
-                            if (srr.Count > 0)
-                            {
-                                lCollision.collidedWith = srr[0].gameObject;
-                                lCollision.worldPosition = srr[0].worldPosition;
-                                lCollision.worldNormal = srr[0].worldNormal;
-                                lCollision.distance = srr[0].distance;
-                            }
-                        }
+            // Left
+            {
+                var srr = Instance.lRaycaster.SortedRaycastResults;
+                if (srr.Count > 0)
+                {
+                    lCollision.collidedWith = srr[0].gameObject;
+                    lCollision.worldPosition = srr[0].worldPosition;
+                    lCollision.worldNormal = srr[0].worldNormal;
+                    lCollision.distance = srr[0].distance;
+                }
+            }
 
-                        // Right
-                        {
-                            var srr = Instance.rRaycaster.SortedRaycastResults;
-                            if (srr.Count > 0)
-                            {
-                                rCollision.collidedWith = srr[0].gameObject;
-                                rCollision.worldPosition = srr[0].worldPosition;
-                                rCollision.worldNormal = srr[0].worldNormal;
-                                rCollision.distance = srr[0].distance;
-                            }
-                        }*/
-        }
+            // Right
+            {
+                var srr = Instance.rRaycaster.SortedRaycastResults;
+                if (srr.Count > 0)
+                {
+                    rCollision.collidedWith = srr[0].gameObject;
+                    rCollision.worldPosition = srr[0].worldPosition;
+                    rCollision.worldNormal = srr[0].worldNormal;
+                    rCollision.distance = srr[0].distance;
+                }
+            }
+        }*/
 
         public void Start()
         {
@@ -142,50 +139,7 @@ namespace OU.OVAL.Core
             // Awake() routines of the elements themselves.
             scalableVisualElements.SetScaleFactor( config.visualScaleFactor );
         }
-/*
-        public void OnSelect(InputAction.CallbackContext context)
-       // public void Gripped()
-        {
-            if(context.canceled) return; //button input was released; ignore pls
 
-            RaycastHit raycastHit;
-            //left
-            if (leftRaycast.TryGetCurrent3DRaycastHit(out raycastHit))
-            {
-                if (raycastHit.transform.gameObject != null) Debug.Log("Object: " + raycastHit.transform.gameObject.name);
-                else Debug.Log("Nuthin");
-
-            }
-            else Debug.Log("No raycast hit");
-
-           
-
-            *//*            //find which hand selected
-                        Hand hand = DetermineHandController(context);
-
-
-                        //
-                        // Check for collisions of pointer and UI / scene objects.
-                        //
-                        Core.Common.PointerCollisionInfo collision = (hand == Hand.Left) ? lCollision : rCollision;
-
-                        var obj = collision.collidedWith;
-                        OVALObject collidedWithOO = Core.OVALObject.GetOwner(obj);
-                        if (!measureTarget && collidedWithOO) measureTarget = collidedWithOO;
-
-
-                        //
-                        // At this point, we have all the information we need to manipulate the points etc
-                        //
-
-                        var controllerTransform = (tracking == Tracking.Left) ? (common.lTransform) : (common.rTransform);
-                        var pos = (measureOnSurface) ? (collidedAt) : (controllerTransform.position);*//*
-
-
-        }*/
-
-        //move this over to a util class later
-        //both hands?
         public enum Hand { Left, Right, Neither };
         public Hand DetermineHandController(InputAction.CallbackContext context)
         {

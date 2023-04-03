@@ -3772,9 +3772,9 @@ struct Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_marshaled_com
 struct Plane_tB7D8CC6F7AACF5F3AA483AF005C1102A8577BC0C 
 {
 	// UnityEngine.Vector3 UnityEngine.Plane::m_Normal
-	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_Normal_0;
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___m_Normal_1;
 	// System.Single UnityEngine.Plane::m_Distance
-	float ___m_Distance_1;
+	float ___m_Distance_2;
 };
 
 // UnityEngine.Pose
@@ -19168,7 +19168,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ScriptableSettingsBase_tB2C01517BE0CD328058EA
 		// return (ScriptableSettingsBase)instanceProperty.GetValue(null, null);
 		NullCheck(L_1);
 		RuntimeObject* L_2;
-		L_2 = VirtualFuncInvoker2< RuntimeObject*, RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(19 /* System.Object System.Reflection.PropertyInfo::GetValue(System.Object,System.Object[]) */, L_1, NULL, (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)NULL);
+		L_2 = VirtualFuncInvoker2< RuntimeObject*, RuntimeObject*, ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918* >::Invoke(22 /* System.Object System.Reflection.PropertyInfo::GetValue(System.Object,System.Object[]) */, L_1, NULL, (ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918*)NULL);
 		return ((ScriptableSettingsBase_tB2C01517BE0CD328058EA2C16794C588350E6482*)CastclassClass((RuntimeObject*)L_2, ScriptableSettingsBase_tB2C01517BE0CD328058EA2C16794C588350E6482_il2cpp_TypeInfo_var));
 	}
 }
@@ -32483,6 +32483,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRUIInputModule_OnEnable_mB938D9A55AF66E
 	{
 		// base.OnEnable();
 		BaseInputModule_OnEnable_m2F440F226F94D4D79905CD403F08C3AEEE99D965(__this, NULL);
+		// m_ActiveInputMode = ActiveInputMode.InputSystemActions;
+		__this->___m_ActiveInputMode_38 = 1;
 		// m_MouseState = new MouseModel(m_RollingPointerId++);
 		int32_t L_0 = __this->___m_RollingPointerId_58;
 		V_0 = L_0;
@@ -32551,7 +32553,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRUIInputModule_OnEnable_mB938D9A55AF66E
 		if (!L_5)
 		{
 			G_B2_0 = __this;
-			goto IL_0042;
+			goto IL_0049;
 		}
 	}
 	{
@@ -32559,16 +32561,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XRUIInputModule_OnEnable_mB938D9A55AF66E
 		L_6 = XRUIInputModule_InputActionReferencesAreSet_m822F7B7FA9A82D2ACFE91BA0BA9D76EC5219DFC5(__this, NULL);
 		G_B3_0 = ((((int32_t)L_6) == ((int32_t)0))? 1 : 0);
 		G_B3_1 = G_B1_0;
-		goto IL_0043;
+		goto IL_004a;
 	}
 
-IL_0042:
+IL_0049:
 	{
 		G_B3_0 = 0;
 		G_B3_1 = G_B2_0;
 	}
 
-IL_0043:
+IL_004a:
 	{
 		NullCheck(G_B3_1);
 		G_B3_1->___m_UseBuiltInInputSystemActions_59 = (bool)G_B3_0;
@@ -32576,7 +32578,7 @@ IL_0043:
 		int32_t L_7 = __this->___m_ActiveInputMode_38;
 		if (!L_7)
 		{
-			goto IL_0056;
+			goto IL_005d;
 		}
 	}
 	{
@@ -32584,7 +32586,7 @@ IL_0043:
 		XRUIInputModule_EnableAllActions_m4E7A83803EEEC56E03AD359EC48D82574A026D2C(__this, NULL);
 	}
 
-IL_0056:
+IL_005d:
 	{
 		// }
 		return;
