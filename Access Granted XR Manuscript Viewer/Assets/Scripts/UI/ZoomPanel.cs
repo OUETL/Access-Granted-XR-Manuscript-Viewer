@@ -9,20 +9,20 @@ public class ZoomPanel : MonoBehaviour
     public GameObject magnifyingGlass;
     public Slider zoomSlider;
 
-    // Start is called before the first frame update
-    void Start()
+    /// <summary>
+    /// Hide/Show the magnifying glass. 
+    /// </summary>
+    /// <param name="change"></param>
+    public void ToggleMagnifyingGlass(bool zoom)
     {
-        
+        magnifyingGlass.SetActive(zoom);
     }
-
-    public void ViewToggleValueChanged(Toggle change)
+    /// <summary>
+    /// Adjust zoom level according to the UI slider value
+    /// </summary>
+    public void OnSliderValueChanged()
     {
-        magnifyingGlass.SetActive(change.isOn);
-    }
-
-    public void OnValueChanged()
-    {
-        Debug.Log(zoomSlider.value);
+        //Debug.Log(zoomSlider.value);
         zoomShaderMaterial.SetFloat("_ZoomAmount", zoomSlider.value);
     }
 }

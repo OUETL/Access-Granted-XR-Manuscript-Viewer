@@ -7,7 +7,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.XR;
 using UnityEngine.XR.Interaction.Toolkit;
-using static MeasureInputActionTest;
+using static MeasurePanel;
 using static OU.OVAL.Core.Common;
 
 public class InputMonitor : MonoBehaviour

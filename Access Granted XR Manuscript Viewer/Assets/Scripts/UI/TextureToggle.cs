@@ -13,54 +13,20 @@ public class TextureToggle : MonoBehaviour
     public Toggle textureToggle;
     public TMP_Dropdown dropdown;
 
-    /// <summary>
-    /// OvalObject representing page(s) of the manuscript.
-    /// </summary>
-    private GameObject ovalObject;
-    /// <summary>
-    /// The material of the oval object, which we will change the texture of.
-    /// </summary>
-    public Material material;
-    
-    /// <summary>
-    /// The default texture of the page.
-    /// </summary>
-    public Texture pageTexture;
-    /// <summary>
-    /// The alternate texture of the page, when the texture is 'disabled'.
-    /// </summary>
-    public Texture alternateTexture;
+    public PageLoader pageLoader;
 
-    // Start is called before the first frame update
-    void Start()
+    /// <summary>
+    /// Enable/Disable two book view.
+    /// Will hide the second book and disable the second dropdown if set to false.
+    /// </summary>
+    /// <param name="toggle"></param>
+    public void SetTwoBookView(bool toggle)
     {
-        textureToggle.onValueChanged.AddListener(delegate {
-            ToggleValueChanged(textureToggle);
-        });
-    }
-
-    //actual object swapping in scene and such
-    //obj will be loaded and instantiated in main panel
-    //assuming the alternate texture doesn't change on a per-page basis
-    public void ChangePage(GameObject page)
-    {
-        ovalObject = page;
-
-        material = ovalObject.GetNamedChild("default").GetComponent<Renderer>().material;
-        pageTexture = material.mainTexture;
-    }
-
-    public void ToggleEnable(bool toggle)
-    {
-        //disable/enable ui, hide/show book
-        ovalObject.SetActive(toggle);
+        pageLoader.gameObject.SetActive(toggle);
         textureToggle.interactable = toggle;
         dropdown.interactable = toggle;
     }
 
-    void ToggleValueChanged(Toggle toggle)
-    {
-        if (ovalObject != null) 
-            material.mainTexture = toggle.isOn ? pageTexture : alternateTexture;
-    }
+
+
 }
