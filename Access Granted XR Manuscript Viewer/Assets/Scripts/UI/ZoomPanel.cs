@@ -9,6 +9,8 @@ public class ZoomPanel : MonoBehaviour
     public GameObject magnifyingGlass;
     public Slider zoomSlider;
 
+    //public GameObject page;
+
     /// <summary>
     /// Hide/Show the magnifying glass. 
     /// </summary>
@@ -24,5 +26,6 @@ public class ZoomPanel : MonoBehaviour
     {
         //Debug.Log(zoomSlider.value);
         zoomShaderMaterial.SetFloat("_ZoomAmount", zoomSlider.value);
+        //gameObject.transform.localScale = zoomSlider.value;
     }
 }
