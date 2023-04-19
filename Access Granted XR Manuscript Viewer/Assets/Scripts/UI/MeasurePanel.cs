@@ -77,7 +77,7 @@ public class MeasurePanel : MonoBehaviour
 
     public void Start()
     {
-        LeftDraw.action.performed +=
+ /*       LeftDraw.action.performed +=
         context =>
         {
             if (context.interaction is MultiTapInteraction)
@@ -86,7 +86,7 @@ public class MeasurePanel : MonoBehaviour
             }
             else cancel = false;
 
-        };
+        };*/
     }
     void Update()
     {
@@ -100,15 +100,7 @@ public class MeasurePanel : MonoBehaviour
        
 
 
-        bool lActive = LeftDraw.action.performed +=
-            context =>
-            {
-                if (context.interaction is MultiTapInteraction)
-                {
-                    cancel = true;
-                }
-                   
-            };
+        bool lActive = LeftDraw.action.triggered;
         bool rActive = RightDraw.action.triggered;
 
         bool dropPoint = false;   // drop a new point in the measurement
