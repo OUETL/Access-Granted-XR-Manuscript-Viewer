@@ -6,7 +6,9 @@ using System.Xml.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 using static InputMonitor;
 using static OU.OVAL.Core.Common;
 
@@ -71,7 +73,21 @@ public class MeasurePanel : MonoBehaviour
     {
         //ClearDoodle();
     }
+    bool cancel = false;
 
+    public void Start()
+    {
+        LeftDraw.action.performed +=
+        context =>
+        {
+            if (context.interaction is MultiTapInteraction)
+            {
+                cancel = true;
+            }
+            else cancel = false;
+
+        };
+    }
     void Update()
     {
 /*        if (CancelDraw.action.triggered)
@@ -81,8 +97,18 @@ public class MeasurePanel : MonoBehaviour
         }*/
 
         Vector3 collidedAt = Vector3.zero;
+       
 
-        bool lActive = LeftDraw.action.triggered;
+
+        bool lActive = LeftDraw.action.performed +=
+            context =>
+            {
+                if (context.interaction is MultiTapInteraction)
+                {
+                    cancel = true;
+                }
+                   
+            };
         bool rActive = RightDraw.action.triggered;
 
         bool dropPoint = false;   // drop a new point in the measurement
