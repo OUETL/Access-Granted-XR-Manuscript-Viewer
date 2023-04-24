@@ -6,7 +6,9 @@ using System.Xml.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Interactions;
 using UnityEngine.UI;
+using UnityEngine.XR.Interaction.Toolkit;
 using static InputMonitor;
 using static OU.OVAL.Core.Common;
 
@@ -41,7 +43,6 @@ public class MeasurePanel : MonoBehaviour
     public enum Tracking { None, Left, Right };
     Tracking tracking = Tracking.None;
     bool clickDown = false;
-    //bool isMeasuring = false;
 
     private void Awake()
     {
@@ -72,14 +73,13 @@ public class MeasurePanel : MonoBehaviour
         //ClearDoodle();
     }
 
+    public void Start()
+    {
+
+    }
+
     void Update()
     {
-/*        if (CancelDraw.action.triggered)
-        {
-            ToggleMeasuring();
-            return;
-        }*/
-
         Vector3 collidedAt = Vector3.zero;
 
         bool lActive = LeftDraw.action.triggered;
@@ -110,6 +110,7 @@ public class MeasurePanel : MonoBehaviour
         else
         {
             clickDown = false;
+
         }
 
         //
@@ -161,7 +162,7 @@ public class MeasurePanel : MonoBehaviour
         var controllerTransform = inputInfo.HandTransform;
         var pos = (measureOnSurface) ? (collidedAt) : (controllerTransform.position);
 
-        if (dropPoint) // && trackCursor)
+        if (dropPoint && trackCursor) // && trackCursor)
         {
             doodle.AddPoint(pos);
             if (doodle.sections[0].Count == 1) doodle.AddPoint(pos); // Also add cursor tracking point, if first point in measurement

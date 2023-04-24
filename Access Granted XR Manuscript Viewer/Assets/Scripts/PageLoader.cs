@@ -54,6 +54,8 @@ public class PageLoader : MonoBehaviour
         //replace old list with new list
         dropdown.ClearOptions();
         dropdown.options.AddRange(pageOptionsList);
+
+        
     }
 
     public Page GetPage(int value)

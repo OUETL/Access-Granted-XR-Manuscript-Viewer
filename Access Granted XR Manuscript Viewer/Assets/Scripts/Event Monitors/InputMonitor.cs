@@ -82,14 +82,22 @@ public class InputMonitor : MonoBehaviour
         RaycastHit raycastHit;
         if (rayInteractor.TryGetCurrent3DRaycastHit(out raycastHit))
         {
+            GameObject collisionObject = null;
+            if (raycastHit.transform.gameObject != null && raycastHit.transform.gameObject.layer == LayerMask.NameToLayer("OvalObject"))
+                collisionObject = raycastHit.transform.gameObject;
+
             hand.PointerCollisionInfo = new Common.PointerCollisionInfo()
             {
-                collidedWith = raycastHit.transform.gameObject,
+                collidedWith = collisionObject,
                 worldPosition = raycastHit.point,
                 worldNormal = raycastHit.normal,
                 distance = raycastHit.distance
 
             };
+        }
+        else
+        {
+            hand.PointerCollisionInfo.collidedWith = null;
         }
     }
 

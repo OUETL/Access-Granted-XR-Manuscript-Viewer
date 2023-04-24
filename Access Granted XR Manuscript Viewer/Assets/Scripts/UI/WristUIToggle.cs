@@ -1,0 +1,28 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class WristUIToggle : MonoBehaviour
+{
+    /// <summary>
+    /// The parent game object that contain all of the UI menus, attached to the left wrist.
+    /// </summary>
+    public GameObject WristUI;
+    public InputActionReference MenuPressed;
+
+    private void Start()
+    {
+        //if the UI is disable before the scene starts, Start() is never called and 
+        //OnMenuPressed is never subscribed. Subscribe first, then hide the UI.
+        MenuPressed.action.started += OnMenuPressed;
+        WristUI.SetActive(false);
+    }
+
+    private void OnMenuPressed(InputAction.CallbackContext obj)
+    {
+        //toggle the menu off/on with the menu button
+        WristUI.SetActive(!WristUI.activeInHierarchy);
+        //Debug.Log("Menu");
+    }
+}
