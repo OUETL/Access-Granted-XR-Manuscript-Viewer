@@ -1196,10 +1196,10 @@
                 {
                     "name": "",
                     "id": "d6fd3bb5-c747-4eba-b599-1c6d7c738e2a",
-                    "path": "<Mouse>/scroll",
+                    "path": "<XRController>{RightHand}/joystick",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller",
                     "action": "ScrollWheel",
                     "isComposite": false,
                     "isPartOfComposite": false
