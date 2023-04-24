@@ -9,6 +9,7 @@ using UnityEngine;
 /// </summary>
 public class HeightDepthAdjuster : MonoBehaviour
 {
+    public GameObject Floor;
     public void AdjustHeight(float newY)
     {
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
@@ -22,5 +23,10 @@ public class HeightDepthAdjuster : MonoBehaviour
     public void AdjustDepth(float newZ)
     {
         transform.position = new Vector3(transform.position.x, transform.position.y, newZ);
+    }
+
+    public void AdjustFloor(float floorY)
+    {
+        Floor.transform.position = new Vector3(Floor.transform.position.x, floorY, Floor.transform.position.z);
     }
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5550130504955285388}
   - component: {fileID: 4599707930127891235}
   - component: {fileID: 6929803265517118}
+  - component: {fileID: 2618318041591187913}
   m_Layer: 6
   m_Name: chad_pgs_218_219
   m_TagString: Untagged
@@ -83,6 +84,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2618318041591187913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224363169510667119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142fdc8c88f747240ae57b411883da69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalTexture: {fileID: 0}
+  AlternateTexture: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
+  Material: {fileID: 0}
 --- !u!1 &250336452000147056
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,6 +110,7 @@ GameObject:
   - component: {fileID: 3593098254234705370}
   - component: {fileID: 8606917198433648239}
   - component: {fileID: 8623830206188301891}
+  - component: {fileID: 5467456461189993595}
   m_Layer: 6
   m_Name: chad_pgs_154_155
   m_TagString: Untagged
@@ -166,6 +183,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5467456461189993595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 250336452000147056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142fdc8c88f747240ae57b411883da69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalTexture: {fileID: 0}
+  AlternateTexture: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
+  Material: {fileID: 0}
 --- !u!1 &4012341360726941383
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,6 +209,7 @@ GameObject:
   - component: {fileID: 3270303191083896538}
   - component: {fileID: 3320559719783401179}
   - component: {fileID: 7453166569009181352}
+  - component: {fileID: 2546423923100432396}
   m_Layer: 6
   m_Name: chad_pgs_220_221
   m_TagString: Untagged
@@ -249,6 +282,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2546423923100432396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4012341360726941383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142fdc8c88f747240ae57b411883da69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalTexture: {fileID: 0}
+  AlternateTexture: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
+  Material: {fileID: 0}
 --- !u!1 &4410077824267785770
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +308,7 @@ GameObject:
   - component: {fileID: 4865454487639229713}
   - component: {fileID: 7733452728167513179}
   - component: {fileID: 6518683835919505615}
+  - component: {fileID: 2298933273768866753}
   m_Layer: 6
   m_Name: chiro_obj
   m_TagString: Untagged
@@ -332,6 +381,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2298933273768866753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4410077824267785770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142fdc8c88f747240ae57b411883da69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalTexture: {fileID: 0}
+  AlternateTexture: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
+  Material: {fileID: 0}
 --- !u!1 &4665295500284292851
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,6 +665,7 @@ GameObject:
   - component: {fileID: 7457235678566470345}
   - component: {fileID: 2691273214557601301}
   - component: {fileID: 5127740670182695502}
+  - component: {fileID: 8033269381475634789}
   m_Layer: 6
   m_Name: chad_pgs_140_141
   m_TagString: Untagged
@@ -673,6 +738,21 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8033269381475634789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8378753875572059489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142fdc8c88f747240ae57b411883da69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalTexture: {fileID: 0}
+  AlternateTexture: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
+  Material: {fileID: 0}
 --- !u!1 &8480282256258221727
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +764,7 @@ GameObject:
   - component: {fileID: 4554068416910424672}
   - component: {fileID: 3863683807062446817}
   - component: {fileID: 692448203355815121}
+  - component: {fileID: 7802207895778881374}
   m_Layer: 6
   m_Name: chad_pgs_142_143
   m_TagString: Untagged
@@ -756,3 +837,18 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7802207895778881374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8480282256258221727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 142fdc8c88f747240ae57b411883da69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalTexture: {fileID: 0}
+  AlternateTexture: {fileID: 2800000, guid: dffef66376be4fa480fb02b19edbe903, type: 3}
+  Material: {fileID: 0}
