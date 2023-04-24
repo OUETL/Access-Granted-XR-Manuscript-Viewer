@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class WristUIToggle : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class WristUIToggle : MonoBehaviour
     /// </summary>
     public GameObject WristUI;
     public InputActionReference MenuPressed;
+    public XRInteractorLineVisual leftHandLine;
 
     private void Start()
     {
@@ -22,7 +24,8 @@ public class WristUIToggle : MonoBehaviour
     private void OnMenuPressed(InputAction.CallbackContext obj)
     {
         //toggle the menu off/on with the menu button
-        WristUI.SetActive(!WristUI.activeInHierarchy);
-        //Debug.Log("Menu");
+        bool enable = !WristUI.activeInHierarchy;
+        WristUI.SetActive(enable);
+        leftHandLine.enabled = !enable;
     }
 }
