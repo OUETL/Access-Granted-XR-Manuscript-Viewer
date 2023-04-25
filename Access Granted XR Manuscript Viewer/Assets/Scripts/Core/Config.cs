@@ -49,7 +49,7 @@ namespace OU.OVAL.Core
             }
             else
             {
-                Debug.Log( "Default config file '" + defaultConfigPath + "' not present." );
+                //Debug.Log( "Default config file '" + defaultConfigPath + "' not present." );
             }
         }
 

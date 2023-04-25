@@ -85,7 +85,7 @@ PlayerSettings:
   hideHomeButton: 0
   submitAnalytics: 1
   usePlayerLog: 1
-  bakeCollisionMeshes: 0
+  bakeCollisionMeshes: 1
   forceSingleInstance: 0
   useFlipModelSwapchain: 1
   resizableWindow: 0
@@ -135,7 +135,12 @@ PlayerSettings:
     16:9: 1
     Others: 1
   bundleVersion: 0.1
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 919132149155446097, guid: abb1e63c7da31354aa2c0b9621be23eb, type: 3}
+  - {fileID: 919132149155446097, guid: 99f98ce645cb3214cb4c1263d4d2b2e0, type: 3}
+  - {fileID: 919132149155446097, guid: 9c19dc15420e47c4daf67c7f45ede8a6, type: 3}
+  - {fileID: 919132149155446097, guid: 173a9f15407caf04c907aa2878dba1e8, type: 3}
+  - {fileID: 919132149155446097, guid: 31d022ce801ca0c44ab7696615c23f84, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -163,7 +168,7 @@ PlayerSettings:
     tvOS: 0
   overrideDefaultApplicationIdentifier: 1
   AndroidBundleVersionCode: 1
-  AndroidMinSdkVersion: 29
+  AndroidMinSdkVersion: 23
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0
   aotOptions: 
