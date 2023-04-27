@@ -18,7 +18,7 @@ public class WristUIToggle : MonoBehaviour
         //if the UI is disable before the scene starts, Start() is never called and 
         //OnMenuPressed is never subscribed. Subscribe first, then hide the UI.
         MenuPressed.action.started += OnMenuPressed;
-        WristUI.SetActive(true);
+        //WristUI.SetActive(true);
         leftHandLine.enabled = false;
     }
 
@@ -28,5 +28,6 @@ public class WristUIToggle : MonoBehaviour
         bool enable = !WristUI.activeInHierarchy;
         WristUI.SetActive(enable);
         leftHandLine.enabled = !enable;
+        Debug.Log("Menu");
     }
 }
