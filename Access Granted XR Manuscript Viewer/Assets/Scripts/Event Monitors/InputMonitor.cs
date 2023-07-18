@@ -30,7 +30,6 @@ public class InputMonitor : MonoBehaviour
 
     // Left and right controller transforms
     public Transform lTransform, rTransform;
-    public PlayerInput playerInput;
 
     public void ChangeInteractionLayer()
     {

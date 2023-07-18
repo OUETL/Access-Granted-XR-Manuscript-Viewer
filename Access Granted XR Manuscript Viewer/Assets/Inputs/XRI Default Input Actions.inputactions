@@ -216,7 +216,7 @@
                     "path": "<XRController>{LeftHand}/menuButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Generic XR Controller",
+                    "groups": "Generic XR Controller;Object Interaction Control Scheme",
                     "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -227,7 +227,7 @@
                     "path": "<XRController>{RightHand}/menu",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Generic XR Controller;Object Interaction Control Scheme",
                     "action": "Menu",
                     "isComposite": false,
                     "isPartOfComposite": false

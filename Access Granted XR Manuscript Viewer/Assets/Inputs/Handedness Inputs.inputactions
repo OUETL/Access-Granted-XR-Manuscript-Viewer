@@ -1507,7 +1507,7 @@
                     "path": "<XRController>{LeftHand}/secondaryButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Generic XR Controller",
+                    "groups": "Generic XR Controller;Object Interaction Control Scheme",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -1518,7 +1518,7 @@
                     "path": "<XRController>{RightHand}/secondaryButton",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Generic XR Controller",
+                    "groups": "Generic XR Controller;Object Interaction Control Scheme",
                     "action": "Cancel",
                     "isComposite": false,
                     "isPartOfComposite": false

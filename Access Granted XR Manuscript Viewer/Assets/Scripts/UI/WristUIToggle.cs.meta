@@ -3,7 +3,11 @@ guid: 8d859621d040ba14f935fcc2fd934162
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - WristUI: {instanceID: 0}
+  - MenuPressed: {fileID: 3916730463652292459, guid: da2b439d1a2de5c46a4f428f8cf4fe19,
+      type: 3}
+  - leftHandLine: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
